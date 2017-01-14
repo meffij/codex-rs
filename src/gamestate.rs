@@ -1,28 +1,30 @@
 use super::*;
+use enums::*;
 
 #[derive(Clone, Debug)]
-struct BuildingEntity {
-	card : Option<CardInstance>,
-	controller : Player,
-	ty : CardType,
-	HP : u8,
+pub enum EntityTypeData {
+	Unit {},
+	Spell {},
+	Building {},
+	Upgrade {},
 }
 
 #[derive(Clone, Debug)]
-struct Entity {
+pub struct Entity {
+	timestamp : Timestamp,
 	card : Option<CardInstance>,
 	controller : Player,
-	ty : CardTypeData,
+	effects : Vec<Effect>,
 }
 
 #[derive(Clone, Debug)]
-struct Deck {
+pub struct Deck {
 	deck : Vec<CardInstance>,
 	top : Option<CardInstance>,
 }
 
 #[derive(Clone, Copy, Debug)]
-struct BuildingStats {
+pub struct BuildingStats {
 	health : u8,
 	builtBefore : bool,
 	builtThisTurn : bool,
@@ -30,13 +32,13 @@ struct BuildingStats {
 }
 
 #[derive(Clone, Debug)]
-struct Buildings {
+pub struct Buildings {
 	basehealth : u8,
 	stats : [BuildingStats ; 3],
 }
 
 #[derive(Clone, Debug)]
-struct PlayerState {
+pub struct PlayerState {
 	gold : u8,
 	deck : Deck,
 	hand : Vec<CardInstance>,
@@ -44,7 +46,7 @@ struct PlayerState {
 }
 
 #[derive(Clone, Debug)]
-struct GameState {
+pub struct GameState {
 	field : Vec<Entity>,
 	ps : Vec<PlayerState>,
 }

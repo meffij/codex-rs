@@ -1,11 +1,9 @@
 #![allow(non_snake_case)]
 use super::*;
 
-/*
 lazy_static! {
 	pub static ref OLDER_BROTHER : CardData = CardData {
 		name : "Older Brother",
-		ty : CardType::Unit,
 		color : Color::Neutral,
 		spec : None,
 		techlevel : TechLevel::Tech0,
@@ -15,10 +13,16 @@ lazy_static! {
 		rules_text_2 : "",
 		rules_text_3 : "",
 		flavor_text : "",
-		ATK : 2,
-		HP : 2,
 		subtype : vec![],
+		ty : CardTypeData::Unit {
+			ATK : 2,
+			HP : 2,
+		},
+		base_effects : vec![],
 	};
+}
+/*
+
 	pub static ref HELPFUL_TURTLE : CardData = CardData {
 		name : "Helpful Turtle",
 		ty : CardType::Unit,

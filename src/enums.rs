@@ -1,3 +1,5 @@
+use super::Timestamp;
+
 #[derive(Clone, Copy, Debug)]
 pub struct Player(u8);
 
@@ -66,6 +68,22 @@ pub enum Subtype {
 }
 
 #[derive(Clone, Debug)]
-enum Effect {
+pub struct Layer(u8);
 
+#[derive(Clone, Debug)]
+pub enum EffectTrigger {
+	Upkeep,
+}
+
+#[derive(Clone, Debug)]
+pub struct Effect {
+	pub ty : EffectType,
+	pub layer : Layer,
+	pub timestamp : Timestamp,
+	pub trigger : EffectTrigger,
+}
+
+#[derive(Clone, Debug)]
+pub enum EffectType {
+	HelpfulTurtleEffect,
 }

@@ -14,44 +14,9 @@ use card::*;
 mod gamestate;
 use gamestate::*;
 
-/*
-lazy_static! {
-	pub static ref BASECARDDATA : CardData = CardData::new();
-}
-
-lazy_static! {
-	pub static ref BASENEUTRALDATA : CardData = CardData { 
-		color : Color::Neutral,
-		.. BASECARDDATA.clone()
-	};
-}
-*/
+#[derive(Clone, Debug)]
+pub struct Timestamp(u32);
 
 fn main() {
-	/*
-  println!("Hello, world!");
-	let a = BASECARDDATA.clone();
-	println!("{:?}", a.name());
-	*/
-}
 
-/*
-#[test]
-fn test_base() {
-	let a = BASECARDDATA.clone();
-	assert!(a.name() == "");
 }
-
-#[test]
-fn test_build() {
-	let a = CardData {
-		name : "Timely Messenger", 
-		.. BASECARDDATA.clone()
-	};
-	assert!(a.name() == "Timely Messenger");
-	let neutral_template = CardData {
-		color : Color::Neutral,
-		.. BASECARDDATA.clone()
-	};
-}
-*/
