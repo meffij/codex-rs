@@ -1,5 +1,7 @@
 #![allow(non_snake_case)]
 use super::*;
+
+/*
 lazy_static! {
 	pub static ref OLDER_BROTHER : CardData = CardData {
 		name : "Older Brother",
@@ -12,6 +14,7 @@ lazy_static! {
 		rules_text_1 : "",
 		rules_text_2 : "",
 		rules_text_3 : "",
+		flavor_text : "",
 		ATK : 2,
 		HP : 2,
 		subtype : vec![],
@@ -27,6 +30,7 @@ lazy_static! {
 		rules_text_1 : "Healing 1",
 		rules_text_2 : "",
 		rules_text_3 : "",
+		flavor_text : "",
 		ATK : 1,
 		HP : 2,
 		subtype : vec![],
@@ -42,6 +46,7 @@ lazy_static! {
 		rules_text_1 : "Haste",
 		rules_text_2 : "",
 		rules_text_3 : "",
+		flavor_text : "",
 		ATK : 1,
 		HP : 1,
 		subtype : vec![Subtype::Mercenary],
@@ -57,10 +62,11 @@ lazy_static! {
 		rules_text_1 : "",
 		rules_text_2 : "",
 		rules_text_3 : "",
+		flavor_text : "",
 		ATK : 1,
 		HP : 2,
 		subtype : vec![],
 	};
 
 }
-
+*/
