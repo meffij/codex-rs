@@ -14,6 +14,8 @@ use card::*;
 mod gamestate;
 use gamestate::*;
 
+mod hero;
+
 #[derive(Clone, Debug)]
 pub struct Timestamp(u32);
 

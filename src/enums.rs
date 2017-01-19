@@ -1,12 +1,14 @@
 use super::Timestamp;
 
 #[derive(Clone, Copy, Debug)]
-pub struct Player(u8);
+pub struct Player(pub u8);
 
 #[derive(Clone, Copy, Debug)]
 pub enum Phase {
+    Tech,
 	Upkeep,
 	Main,
+    DiscardDraw,
 	EOT,
 }
 
@@ -73,6 +75,7 @@ pub struct Layer(u8);
 #[derive(Clone, Debug)]
 pub enum EffectTrigger {
 	Upkeep,
+	EOT,
 }
 
 #[derive(Clone, Debug)]
@@ -86,4 +89,11 @@ pub struct Effect {
 #[derive(Clone, Debug)]
 pub enum EffectType {
 	HelpfulTurtleEffect,
+}
+
+#[derive(Clone, Debug)]
+pub enum Action {
+	LockInPatrollers,
+	OrderSimultaneousEffects,
+	ChooseDrawnCards,
 }
